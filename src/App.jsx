@@ -1,16 +1,16 @@
-import { useState } from 'react'
-
-import './App.css'
+import react from "react";
+import Header from "./Header.jsx";
+import Footer from "./Footer.jsx";
+import { Outlet } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className='bg-gray-800 text-slate-200 min-h-screen flex flex-col items-center justify-center'>
-      <h1 className='text-4xl font-bold mb-4'>Vite + React</h1>
-      <div className='text-2xl mb-4'>Count is: {count}</div>
-    </div>
-  )
+    <>
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;
